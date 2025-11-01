@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BURAQ - Layanan Perizinan Cepat & Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'buraq-pink': '#fc0fb9',
+            'buraq-dark': '#1a0315',
+            'buraq-light': '#fdf2fb',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+        select#service option {
+            background: #1f2937; /* bg-gray-800 */
+            color: white;
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-buraq-dark font-sans text-white antialiased">
+
+    <!-- Mobile Menu Button -->
+    <button id="sidebar-open-button" type="button" class="fixed top-5 left-5 z-50 md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 bg-gray-900/50 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="sidebar" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+
+    <!-- Sidebar Section -->
+    <aside id="sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen bg-buraq-dark/95 backdrop-blur-sm border-r border-gray-800 p-6 flex flex-col transition-transform duration-300 ease-in-out transform -translate-x-full md:translate-x-0">
+        <div class="flex-shrink-0 mb-10">
+            <a href="#dashboard" class="text-3xl font-black text-buraq-pink tracking-wider">
+              BURAQ
+            </a>
+        </div>
+        
+        <nav class="flex flex-col space-y-4">
+            <a href="#paket" class="text-gray-300 hover:text-buraq-pink transition-colors duration-300 font-semibold text-lg p-2 rounded-md hover:bg-gray-800/50 nav-link">Paket</a>
+            <a href="#testimoni" class="text-gray-300 hover:text-buraq-pink transition-colors duration-300 font-semibold text-lg p-2 rounded-md hover:bg-gray-800/50 nav-link">Testimoni</a>
+            <a href="#kontak" class="text-gray-300 hover:text-buraq-pink transition-colors duration-300 font-semibold text-lg p-2 rounded-md hover:bg-gray-800/50 nav-link">Kontak</a>
+        </nav>
+
+        <a href="#kontak" class="mt-auto bg-buraq-pink text-white font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 w-full text-center nav-link">
+            Pesan Sekarang
+        </a>
+    </aside>
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 z-30 md:hidden hidden"></div>
+
+    <div class="md:ml-64">
+        <main>
+            <!-- Hero Section -->
+            <section id="dashboard" class="relative bg-gradient-to-br from-buraq-pink via-purple-800 to-buraq-dark">
+              <div class="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
+                <div class="text-center">
+                  <h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tight mb-6">
+                    Urus Izin Jadi <span class="block">Mudah & Cepat</span>
+                  </h1>
+                  <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 mb-10">
+                    BURAQ hadir untuk membantu Anda mengurus segala perizinan usaha dengan proses yang transparan, efisien, dan terpercaya. Fokus pada bisnis Anda, biarkan kami yang urus perizinannya.
+                  </p>
+                  <a
+                    href="#paket"
+                    class="inline-block bg-white text-buraq-pink font-bold py-4 px-10 text-lg rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-buraq-pink/40"
+                  >
+                    Lihat Paket Layanan
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Packages Section -->
+            <section id="paket" class="py-20 sm:py-28 bg-buraq-dark">
+              <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                  <h2 class="text-3xl sm:text-4xl font-black text-white">Layanan Perizinan Lengkap</h2>
+                  <p class="mt-4 text-lg text-gray-400">
+                    Kami menyediakan berbagai layanan untuk memenuhi semua kebutuhan perizinan bisnis Anda dari awal hingga berkembang.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  <!-- Package Card 1 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">NPWP Pribadi</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Pengajuan Nomor Pokok Wajib Pajak untuk perorangan dengan cepat dan mudah.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Rp 250.000</p>
+                  </div>
+                  <!-- Package Card 2 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">NPWP Organisasi</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Pendaftaran NPWP untuk badan usaha, yayasan, atau organisasi lainnya.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Rp 500.000</p>
+                  </div>
+                  <!-- Package Card 3 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0v-4m6 4v-4m6 4v-4m2 4V5m-2 16H5m14 0v-4M7 5h10v16H7V5z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">NIB</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Dapatkan Nomor Induk Berusaha sebagai identitas resmi usaha Anda.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Rp 750.000</p>
+                  </div>
+                  <!-- Package Card 4 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">Sertifikasi Halal</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Proses sertifikasi halal untuk produk Anda agar terjamin dan dipercaya konsumen.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Mulai dari Rp 3.5jt</p>
+                  </div>
+                  <!-- Package Card 5 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v.01M12 20v.01M4 12h.01M20 12h.01M6.343 6.343l.01.01m11.314 11.314l.01.01M6.343 17.657l.01-.01m11.314-11.314l.01-.01" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">Pendaftaran Merek</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Lindungi identitas brand dan produk Anda dengan mendaftarkan merek dagang.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Mulai dari Rp 2.5jt</p>
+                  </div>
+                  <!-- Package Card 6 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">Pengajuan BPOM</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Izin edar dari Badan POM untuk produk makanan, minuman, dan kosmetik.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Mulai dari Rp 5jt</p>
+                  </div>
+                  <!-- Package Card 7 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">Pengajuan SPP-IRT</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Sertifikat Produksi Pangan Industri Rumah Tangga untuk usaha skala kecil.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Rp 1.000.000</p>
+                  </div>
+                  <!-- Package Card 8 -->
+                  <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-buraq-pink transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                      <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-buraq-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 4.586A10.025 10.025 0 0112 4.025c2.49 0 4.805.894 6.64 2.443M18.3 19.398A10.026 10.026 0 0112 20c-2.49 0-4.805-.894-6.64-2.443m13.28-11.02A10.026 10.026 0 0118.3 19.4" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 100-18 9 9 0 000 18z" /></svg></div>
+                      <h3 class="text-xl font-bold text-white mb-3">Website Perusahaan</h3>
+                      <p class="text-gray-400 flex-grow mb-6">Landing page atau company profile profesional untuk meningkatkan kredibilitas bisnis Anda.</p>
+                      <p class="text-2xl font-bold text-buraq-pink mt-auto">Mulai dari Rp 2jt</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimoni" class="py-20 sm:py-28 bg-gradient-to-br from-purple-900 to-buraq-dark">
+              <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                  <h2 class="text-3xl sm:text-4xl font-black text-white">Apa Kata Klien Kami</h2>
+                  <p class="mt-4 text-lg text-gray-400">
+                    Kepercayaan dan kepuasan klien adalah prioritas utama kami.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col h-full">
+                        <p class="text-gray-200 text-lg flex-grow">"Prosesnya cepat sekali! Tim BURAQ sangat profesional dan membantu saya dari awal sampai NIB terbit. Sangat direkomendasikan!"</p>
+                        <div class="flex items-center mt-6">
+                            <img class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/id/1005/100/100" alt="Andi Wijaya" />
+                            <div class="ml-4">
+                                <p class="font-bold text-white">Andi Wijaya</p>
+                                <p class="text-buraq-pink text-sm">Owner, Kopi Senja</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col h-full">
+                        <p class="text-gray-200 text-lg flex-grow">"Awalnya bingung urus sertifikasi halal, tapi berkat BURAQ semua jadi jelas dan terarah. Alhamdulillah sekarang produk saya sudah bersertifikat halal."</p>
+                        <div class="flex items-center mt-6">
+                            <img class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/id/1011/100/100" alt="Rina Setyawati" />
+                            <div class="ml-4">
+                                <p class="font-bold text-white">Rina Setyawati</p>
+                                <p class="text-buraq-pink text-sm">Founder, Dapur Bunda Rina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col h-full">
+                        <p class="text-gray-200 text-lg flex-grow">"Pendaftaran merek yang saya kira bakal rumit, ternyata bisa selesai dengan lancar. Terima kasih BURAQ atas pelayanannya yang luar biasa!"</p>
+                        <div class="flex items-center mt-6">
+                            <img class="h-14 w-14 rounded-full object-cover" src="https://picsum.photos/id/1025/100/100" alt="Budi Santoso" />
+                            <div class="ml-4">
+                                <p class="font-bold text-white">Budi Santoso</p>
+                                <p class="text-buraq-pink text-sm">CEO, Creative Labs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="kontak" class="py-20 sm:py-28 bg-buraq-dark">
+              <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                  <h2 class="text-3xl sm:text-4xl font-black text-white">Siap Memulai? Hubungi Kami!</h2>
+                  <p class="mt-4 text-lg text-gray-400">
+                    Isi form di bawah ini untuk konsultasi gratis atau langsung ajukan layanan. Tim kami akan segera menghubungi Anda.
+                  </p>
+                </div>
+        
+                <div class="max-w-4xl mx-auto bg-gray-900/50 p-8 sm:p-12 rounded-2xl border border-gray-700">
+                  <form id="contact-form" action="#" method="POST">
+                    <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
+                      <div>
+                        <label for="full-name" class="block text-sm font-semibold leading-6 text-gray-300">Nama Lengkap</label>
+                        <div class="mt-2.5">
+                          <input type="text" name="full-name" id="full-name" autocomplete="name" required class="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buraq-pink sm:text-sm sm:leading-6" />
+                        </div>
+                      </div>
+                      <div>
+                        <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-300">Nomor Telepon</label>
+                        <div class="mt-2.5">
+                          <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" required class="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buraq-pink sm:text-sm sm:leading-6" />
+                        </div>
+                      </div>
+                      <div class="sm:col-span-2">
+                        <label for="email" class="block text-sm font-semibold leading-6 text-gray-300">Email</label>
+                        <div class="mt-2.5">
+                          <input type="email" name="email" id="email" autocomplete="email" required class="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buraq-pink sm:text-sm sm:leading-6" />
+                        </div>
+                      </div>
+                      <div class="sm:col-span-2">
+                        <label for="service" class="block text-sm font-semibold leading-6 text-gray-300">Layanan yang diminati</label>
+                        <div class="mt-2.5">
+                          <select id="service" name="service" class="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buraq-pink sm:text-sm sm:leading-6">
+                            <option>NPWP Pribadi</option>
+                            <option>NPWP Organisasi</option>
+                            <option>NIB</option>
+                            <option>Sertifikasi Halal</option>
+                            <option>Pendaftaran Merek</option>
+                            <option>Pengajuan BPOM</option>
+                            <option>Pengajuan SPP-IRT</option>
+                            <option>Website Perusahaan</option>
+                            <option>Lainnya</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="sm:col-span-2">
+                        <label for="message" class="block text-sm font-semibold leading-6 text-gray-300">Pesan (Opsional)</label>
+                        <div class="mt-2.5">
+                          <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buraq-pink sm:text-sm sm:leading-6"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-10">
+                      <button type="submit" class="block w-full rounded-md bg-buraq-pink px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-buraq-pink transition-all duration-300">Kirim Pesan via WhatsApp</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="bg-buraq-dark border-t border-gray-800">
+          <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-400 text-sm">
+              &copy; <span id="current-year"></span> BURAQ. All rights reserved.
+            </p>
+          </div>
+        </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // JavaScript for Mobile Sidebar Toggle
+        const sidebar = document.getElementById('sidebar');
+        const openButton = document.getElementById('sidebar-open-button');
+        const overlay = document.getElementById('sidebar-overlay');
+        const allNavLinks = document.querySelectorAll('a[href^="#"]');
+
+        const openSidebar = () => {
+          sidebar.classList.remove('-translate-x-full');
+          overlay.classList.remove('hidden');
+          openButton.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeSidebar = () => {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+          openButton.setAttribute('aria-expanded', 'false');
+        };
+
+        openButton.addEventListener('click', openSidebar);
+        overlay.addEventListener('click', closeSidebar);
+        
+        // JavaScript for Smooth Scrolling and closing sidebar on mobile
+        allNavLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+            
+            // Close sidebar on mobile if a nav link is clicked
+            if (window.innerWidth < 768 && sidebar.classList.contains('nav-link')) {
+              closeSidebar();
+            } else if (window.innerWidth < 768 && this.closest('#sidebar')) {
+              closeSidebar();
+            }
+          });
+        });
+
+        // JavaScript for dynamic year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // JavaScript for WhatsApp Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const name = document.getElementById('full-name').value;
+          const phone = document.getElementById('phone-number').value;
+          const email = document.getElementById('email').value;
+          const service = document.getElementById('service').value;
+          const message = document.getElementById('message').value;
+
+          const whatsAppNumber = '628563231191'; // Ganti 08... dengan 628...
+
+          let formattedMessage = `Halo BURAQ,
+
+Saya tertarik untuk menggunakan layanan Anda.
+Berikut adalah detail saya:
+
+*Nama Lengkap:* ${name}
+*Nomor Telepon:* ${phone}
+*Email:* ${email}
+*Layanan yang diminati:* ${service}`;
+
+          if (message.trim() !== '') {
+            formattedMessage += `
+
+*Pesan Tambahan:*
+${message}`;
+          }
+
+          const encodedMessage = encodeURIComponent(formattedMessage);
+          const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodedMessage}`;
+
+          window.open(whatsappUrl, '_blank');
+        });
+      });
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
